@@ -14,12 +14,12 @@ export default function App() {
   return (
     <div className="bg-vectBlack text-white antialiased">
       <Header />
-      <main className="max-w-7xl mx-auto px-6">
+      <main className="container pt-24">
+        <Hero />
         <About />
         <Vision />
         <Tokenomics />
         <Documents />
-         <Hero />
         <BuyWidget />
         <Roadmap />
         <Team />

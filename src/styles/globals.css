@@ -2,22 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Animated neon gradient background */
+html { scroll-behavior: smooth; }
+
+:root{
+  --ink: #0A0E1A;
+  --midnight: #0b1220;
+  --gold: #D4AF37;
+  --goldLight: #E6C76E;
+  --cyan: #00d4ff;
+  --violet: #8b5cf6;
+}
+
+/* Layered background: mesh + subtle grid */
 body {
-  background: radial-gradient(circle at 20% 30%, #020024, #000000 70%);
+  background-color: var(--ink);
+  background-image: theme(backgroundImage.mesh), theme(backgroundImage.grid);
+  background-size: cover, theme(backgroundSize.grid);
+  background-position: center, top left;
   color: white;
   font-family: "Poppins", "Orbitron", sans-serif;
   overflow-x: hidden;
 }
 
-/* Neon glow helpers */
-.glow-text {
-  text-shadow: 0 0 10px #00d4ff, 0 0 20px #8b5cf6;
+/* Layout helpers */
+.container{ max-width: 80rem; margin-inline: auto; padding-inline: 1rem; }
+@media (min-width: 768px){ .container{ padding-inline: 1.5rem; } }
+
+.section{ padding-block: 5rem; }
+@media (min-width: 768px){ .section{ padding-block: 7rem; } }
+
+.section-title{
+  @apply text-3xl md:text-4xl font-semibold text-gold text-center mb-4;
 }
+.section-subtitle{
+  @apply text-gray-300 text-center max-w-3xl mx-auto mb-10;
+}
+
+/* Cards */
+.card{
+  @apply bg-[#0b1220]/70 border border-white/10 rounded-2xl shadow-glow transition-transform duration-300;
+}
+.card:hover{ transform: translateY(-2px); }
+
+/* Buttons */
+.btn{ @apply inline-flex items-center justify-center rounded-md font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-0; }
+.btn-primary{ @apply btn bg-gold text-black hover:bg-goldLight px-5 py-2 shadow-glow; }
+.btn-outline{ @apply btn border border-gold text-gold hover:bg-gold hover:text-black px-5 py-2; }
+.btn-ghost{ @apply btn text-cyan-300 hover:text-black hover:bg-cyan-400/90 px-5 py-2 border border-cyan-400; }
+
+/* Badges */
+.badge{ @apply inline-flex items-center gap-2 text-xs uppercase tracking-wide px-3 py-1 rounded-full border border-white/10 bg-white/5; }
+
+/* Neon glow helpers */
+.glow-text { text-shadow: 0 0 10px var(--cyan), 0 0 20px var(--violet); }
 
 .glass-card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1rem;
+}
+
+/* Text truncation utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
