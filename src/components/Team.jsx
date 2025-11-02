@@ -4,9 +4,10 @@ import team2 from "../assets/Stefano.jpeg";
 import team3 from "../assets/Ivan.png";
 import team4 from "../assets/Abdul Rafay.jpeg";
 import team5 from "../assets/raffele.jpeg";
-import team6 from "../assets/Sofía Tahuil.jpeg";
+import team6 from "../assets/sofia-tahuil.jpeg";
 import team7 from "../assets/Oluwaseun.jpeg";
 import team8 from "../assets/abdul rehman.jpeg";
+import team9 from "../assets/Gerjon.jpeg";
 const teamMembers = [
   { name: "Enea Benedetto", role: "Founder & Vision Lead", img: team1 },
   { name: "Stefano Della Valle", role: "Lead Blockchain & AI Engineer", img: team2 },
@@ -14,8 +15,9 @@ const teamMembers = [
   { name: "Abdul Rafay", role: "Core Blockchain Engineer", img: team4 },
   { name: "Raffaele Giove", role: "AI & Automation", img: team5 },
   { name: "Sofia Tahuil", role: "Design Manager", img: team6 },
-  { name: "Oluwaseun Akinola", role: "Community Manager", img: team7 },
+  { name: "Oluwaseun Oluwatuyi", role: "Community Manager", img: team7 },
   { name: "Abdulrahman Omar", role: "Community and Partnerships Manager", img: team8 },
+  { name: "Gerjon Hodaj", role: "Social Media Leader", img: team9 },
 ];
 
 export default function Team() {
