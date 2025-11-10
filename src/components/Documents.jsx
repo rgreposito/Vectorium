@@ -10,7 +10,7 @@ const documents = [
   },
   {
     icon: Settings,
-    title: "Technical Paper",
+    title: "Technical Documentation",
     description: "Architecture details",
     link: "/documents/technical-paper.pdf",
   },

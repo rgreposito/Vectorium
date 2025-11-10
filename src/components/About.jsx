@@ -7,12 +7,6 @@ export default function About() {
 
   const links = [
     {
-      title: "Vectorium Holding",
-      url: "https://vectorium.co",
-      icon: Shield,
-      description: "Core Ecosystem Infrastructure"
-    },
-    {
       title: "BenediXit OÜ",
       url: "https://benedix.it",
       icon: Zap,

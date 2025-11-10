@@ -30,10 +30,10 @@ export default function BuyWidget() {
   const chains = [
     {
       id: 'bsc',
-      name: 'PancakeSwap',
+      name: 'Raydium',
       network: 'BSC',
       color: 'from-gold to-goldLight',
-      url: 'https://pancakeswap.finance',
+      url: 'https://solscan.io/account/E8JMgYBsthxJkQBKo9pjVgJxaKzpePpmU7YiqDvrzd3b',
       icon: '🥞'
     },
     {

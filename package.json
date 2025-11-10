@@ -1,7 +1,6 @@
 {
   "name": "vect-ai-landing-v2",
   "version": "0.1.0",
-  "homepage": "https://se-ih.org/vectai",
   "private": true,
   "dependencies": {
     "autoprefixer": "^10.4.12",
