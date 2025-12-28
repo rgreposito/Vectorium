@@ -12,12 +12,6 @@ export default function Tokenomics() {
     { label: "Treasury & Reserves", percent: 15, icon: Zap, color: "from-gold to-goldLight" }
   ];
 
-  const priceInfo = [
-    { label: "Private Sale Price", value: "$0.05 USD", icon: Coins },
-    { label: "Listing Target", value: "$0.20 USD", icon: TrendingUp },
-    { label: "Accepted", value: "USDT / USDC / SOL / BNB", icon: Zap }
-  ];
-
   return (
     <>
       <section id="tokenomics" className="section">
@@ -61,81 +55,14 @@ export default function Tokenomics() {
             </div>
           </div>
 
-          {/* Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
-            {/* Price Info Card */}
-            <div className="group relative">
-              {/* Glow effect */}
-              <div className="absolute -inset-2 bg-gradient-to-br from-gold via-goldLight to-gold rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
-              
-              <div className="relative bg-gradient-to-br from-midnight/80 via-ink/80 to-midnight/80 backdrop-blur-2xl rounded-3xl border-2 border-gold/20 group-hover:border-gold/50 transition-all duration-700 overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.1)]">
-                {/* Top scan line */}
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-goldLight to-transparent animate-scan"></div>
-                </div>
-
-                {/* Corner glows */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                
-                <div className="relative p-8">
-                  <div className="space-y-6">
-                    {priceInfo.map((item, idx) => {
-                      const Icon = item.icon;
-                      return (
-                        <div 
-                          key={item.label}
-                          className="group/item relative flex items-center gap-5 p-5 rounded-2xl bg-gradient-to-r from-gold/5 to-transparent border border-gold/10 hover:border-gold/30 hover:bg-gold/10 transition-all duration-500"
-                        >
-                          {/* Scan effect */}
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/10 to-transparent -translate-x-full group-hover/item:translate-x-full transition-transform duration-1000 rounded-2xl"></div>
-                          
-                          {/* Icon */}
-                          <div className="relative flex-shrink-0">
-                            <div className="absolute inset-0 bg-gold/20 blur-xl rounded-xl opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
-                            <div className="relative w-12 h-12 bg-gradient-to-br from-gold/30 to-goldLight/30 backdrop-blur-xl rounded-xl border border-gold/40 flex items-center justify-center group-hover/item:scale-110 group-hover/item:border-gold transition-all duration-500">
-                              <Icon className="w-6 h-6 text-gold drop-shadow-[0_0_8px_rgba(212,175,55,0.8)]" />
-                            </div>
-                          </div>
-
-                          {/* Content */}
-                          <div className="flex-1 min-w-0">
-                            <div className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">
-                              {item.label}
-                            </div>
-                            <div className="text-xl font-black text-transparent bg-gradient-to-r from-gold to-goldLight bg-clip-text">
-                              {item.value}
-                            </div>
-                          </div>
-
-                          {/* Arrow indicator */}
-                          <div className="flex-shrink-0 w-6 h-6 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center opacity-0 group-hover/item:opacity-100 transition-all duration-500">
-                            <div className="w-1.5 h-1.5 bg-gold rounded-full"></div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {/* Footer note */}
-                  <div className="mt-6 pt-6 border-t border-gold/10">
-                    <div className="flex items-center gap-2 text-xs text-gray-500">
-                      <div className="w-1 h-1 bg-gold/50 rounded-full animate-pulse"></div>
-                      <span>Full breakdown will be provided in documentation</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom glow */}
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
-              </div>
-            </div>
-
+          {/* Content */}
+          <div className="max-w-5xl mx-auto">
             {/* Allocation Card */}
             <div className="group relative">
               {/* Glow effect */}
               <div className="absolute -inset-2 bg-gradient-to-br from-gold via-goldLight to-gold rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
               
-              <div className="relative bg-gradient-to-br from-midnight/80 via-ink/80 to-midnight/80 backdrop-blur-2xl rounded-3xl border-2 border-gold/20 group-hover:border-gold/50 transition-all duration-700 overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.1)]">
+              <div className="relative bg-gradient-to-br from-midnight/80 via-ink/80 to-midnight/80 backdrop-blur-2xl rounded-3xl border-2 border-gold/30 group-hover:border-gold/60 transition-all duration-700 overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.15)]">
                 {/* Top scan line */}
                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-goldLight to-transparent animate-scan"></div>

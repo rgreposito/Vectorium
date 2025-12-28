@@ -22,8 +22,11 @@ export default function About() {
 
   return (
     <section id="about" className="section">
-      {/* Subtle background elements */}
-      
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-20 right-1/4 w-96 h-96 bg-gradient-to-br from-gold/5 via-transparent to-transparent rounded-full blur-3xl animate-pulse-slowest"></div>
+        <div className="absolute bottom-40 left-1/3 w-80 h-80 bg-gradient-to-tr from-gold/4 to-transparent rounded-full blur-3xl animate-pulse-slower" style={{animationDelay: '1s'}}></div>
+      </div>
 
       <div className="container relative z-10">
         {/* Refined Section Header */}
@@ -43,10 +46,10 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-20 items-start max-w-7xl mx-auto">
+        <div className="flex flex-col gap-16 max-w-4xl mx-auto">
           
-          {/* LEFT - Refined Visual Display */}
-          <div className="flex justify-center lg:justify-end lg:sticky lg:top-32">
+          {/* TOP - Refined Visual Display */}
+          <div className="flex justify-center w-full">
             <div className="relative group">
               {/* Subtle glow - more refined */}
               <div className="absolute -inset-8 bg-gradient-to-br from-gold/20 via-transparent to-goldLight/20 rounded-full blur-3xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
@@ -100,8 +103,8 @@ export default function About() {
             </div>
           </div>
 
-          {/* RIGHT - Professional Content */}
-          <div className="space-y-10">
+          {/* BOTTOM - Professional Content */}
+          <div className="space-y-10 w-full">
             {/* Main Content Block */}
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-br from-gold/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
